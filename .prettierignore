@@ -1,0 +1,6 @@
+# **/*.json
+**/*.txt
+**/*.xml
+**/*.svg
+tsconfig.json
+dist
