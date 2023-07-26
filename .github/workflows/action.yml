@@ -33,3 +33,5 @@ jobs:
 
       - name: Push new version tag to repository
         run: git push origin main --tags
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
