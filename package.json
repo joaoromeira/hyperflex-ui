@@ -69,10 +69,10 @@
     "dist"
   ],
   "main": "./dist/hyperflex-ui.umd.js",
-  "types": "./dist/index.d.ts",
   "module": "./dist/hyperflex-ui.es.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/hyperflex-ui.es.js",
       "require": "./dist/hyperflex-ui.umd.js"
     }
