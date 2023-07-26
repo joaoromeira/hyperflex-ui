@@ -34,11 +34,11 @@ export const spacing = createSpacing(4);
 export const breakpoints = createBreakpoints({});
 
 export const palette = (token: keyof Tokens) => (props: Any) => {
-  return props['theme']['palette'][token].main;
+  return props['theme']['palette'][token]?.main;
 };
 
 export const _palette = (props: Any) => (token: keyof Tokens) => {
-  return props['theme']['palette'][token].main;
+  return props['theme']['palette'][token]?.main;
 };
 
 export function withUtility<Props extends Record<string, Any>>(

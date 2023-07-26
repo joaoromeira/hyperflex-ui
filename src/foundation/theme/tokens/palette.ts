@@ -25,6 +25,22 @@ export const makePalette = (
     main: tokens.onPrimaryContainer,
     contrastText: tokens.primaryContainer,
   },
+  secondary: {
+    main: tokens.secondary,
+    contrastText: tokens.onSecondary,
+  },
+  onSecondary: {
+    main: tokens.onSecondary,
+    contrastText: tokens.secondary,
+  },
+  secondaryContainer: {
+    main: tokens.secondaryContainer,
+    contrastText: tokens.onSecondaryContainer,
+  },
+  onSecondaryContainer: {
+    main: tokens.onSecondaryContainer,
+    contrastText: tokens.secondaryContainer,
+  },
   success: {
     main: tokens.success,
   },

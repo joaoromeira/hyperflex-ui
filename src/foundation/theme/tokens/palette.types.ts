@@ -8,6 +8,10 @@ declare module '@mui/material/styles/createPalette' {
     onPrimary: SimplePaletteColorOptions;
     primaryContainer: SimplePaletteColorOptions;
     onPrimaryContainer: SimplePaletteColorOptions;
+    secondary: PaletteColor;
+    onSecondary: SimplePaletteColorOptions;
+    secondaryContainer: SimplePaletteColorOptions;
+    onSecondaryContainer: SimplePaletteColorOptions;
     success: PaletteColor;
     onSuccess: SimplePaletteColorOptions;
     successContainer: SimplePaletteColorOptions;
@@ -37,6 +41,10 @@ declare module '@mui/material/styles/createPalette' {
     onPrimary: SimplePaletteColorOptions;
     primaryContainer: SimplePaletteColorOptions;
     onPrimaryContainer: SimplePaletteColorOptions;
+    secondary?: PaletteColorOptions;
+    onSecondary: SimplePaletteColorOptions;
+    secondaryContainer: SimplePaletteColorOptions;
+    onSecondaryContainer: SimplePaletteColorOptions;
     success?: PaletteColorOptions;
     onSuccess: SimplePaletteColorOptions;
     successContainer: SimplePaletteColorOptions;

@@ -1,99 +1,99 @@
 import { Tokens } from './tokens.types';
 
 export const TOKENS_LIGHT: Tokens = {
-  primary: '#00576f',
-  onPrimary: '#e0f5ff',
+  primary: '#005bc1',
+  onPrimary: '#ffffff',
 
-  primaryContainer: '#017fa0',
-  onPrimaryContainer: '#ffffff',
+  primaryContainer: '#d8e2ff',
+  onPrimaryContainer: '#001a41',
 
-  secondary: '#436370',
-  onSecondary: '#4b6a77',
+  secondary: '#565e71',
+  onSecondary: '#ffffff',
 
-  secondaryContainer: '#c7e9fa',
-  onSecondaryContainer: '#fafdff',
+  secondaryContainer: '#dbe2f9',
+  onSecondaryContainer: '#141b2c',
 
-  success: '#587300',
-  onSuccess: '#fff',
+  success: '#006e1b',
+  onSuccess: '#ffffff',
 
-  successContainer: '#D7FF60',
-  onSuccessContainer: '#314000',
+  successContainer: '#71ff75',
+  onSuccessContainer: '#002203',
 
-  error: '#F08A71',
-  onError: '#fff',
+  error: '#c00009',
+  onError: '#ffffff',
 
-  errorContainer: '#F9DCD2',
-  onErrorContainer: '#80230D',
+  errorContainer: '#ffdad5',
+  onErrorContainer: '#410001',
 
-  warning: '#F7CC4A',
-  onWarning: '#403000',
+  warning: '#745b00',
+  onWarning: '#ffffff',
 
-  warningContainer: '#FDE398',
-  onWarningContainer: '#8C6900',
+  warningContainer: '#ffe08b',
+  onWarningContainer: '#241a00',
 
-  info: '#6B90FF',
-  onInfo: '#fff',
+  info: '#00687b',
+  onInfo: '#ffffff',
 
-  infoContainer: '#D7E1FA',
-  onInfoContainer: '#0C44B4',
+  infoContainer: '#aeecff',
+  onInfoContainer: '#001f26',
 
-  background: '#fff',
-  onBackground: '#1A1C18',
+  background: '#fefbff',
+  onBackground: '#1b1b1f',
 
-  surface: '#f6fafd',
-  onSurface: '#181d1e',
+  surface: '#fefbff',
+  onSurface: '#1b1b1f',
 
-  surfaceVariant: '#f6fafd',
-  onSurfaceVariant: '#3f484d',
+  surfaceVariant: '#e1e2ec',
+  onSurfaceVariant: '#44474f',
 
-  outline: '#6f797d',
+  outline: '#74777f',
 };
 
 export const TOKENS_DARK: Tokens = {
-  primary: '#74d2f7',
-  onPrimary: '#003545',
+  primary: '#adc6ff',
+  onPrimary: '#002e69',
 
-  primaryContainer: '#007b9c',
-  onPrimaryContainer: '#f1fafe',
+  primaryContainer: '#004493',
+  onPrimaryContainer: '#d8e2ff',
 
-  secondary: '#aaccdb',
-  onSecondary: '#123441',
+  secondary: '#bfc6dc',
+  onSecondary: '#293041',
 
-  secondaryContainer: '#20414e',
-  onSecondaryContainer: '#8dadbd',
+  secondaryContainer: '#3f4759',
+  onSecondaryContainer: '#dbe2f9',
 
-  success: '#A8D90B',
-  onSuccess: '#314000',
+  success: '#45e355',
+  onSuccess: '#003909',
 
-  successContainer: '#587300',
-  onSuccessContainer: '#D7FF60',
+  successContainer: '#005312',
+  onSuccessContainer: '#71ff75',
 
-  error: '#F08A71',
-  onError: '#5A1909',
+  error: '#ffb4a9',
+  onError: '#690002',
 
-  errorContainer: '#80230D',
-  onErrorContainer: '#F9DCD2',
+  errorContainer: '#930005',
+  onErrorContainer: '#ffdad5',
 
-  warning: '#F7CC4A',
-  onWarning: '#735600',
+  warning: '#f1c100',
+  onWarning: '#3d2f00',
 
-  warningContainer: '#8C6900',
-  onWarningContainer: '#FDE398',
+  warningContainer: '#584400',
+  onWarningContainer: '#ffe08b',
 
-  info: '#B2C9F7',
-  onInfo: '#002E8A',
+  info: '#56d6f5',
+  onInfo: '#003641',
 
-  infoContainer: '#0C44B4',
-  onInfoContainer: '#D7E1FA',
+  infoContainer: '#004e5d',
+  onInfoContainer: '#aeecff',
 
-  background: '#1A1C18',
-  onBackground: '#fff',
+  background: '#1b1b1f',
+  onBackground: '#e3e2e6',
 
-  surface: '#101417',
-  onSurface: '#dfe3e6',
+  surface: '#1b1b1f',
+  onSurface: '#e3e2e6',
 
-  surfaceVariant: '#353a3c',
-  onSurfaceVariant: '#bec8cd',
+  surfaceVariant: '#44474f',
+  onSurfaceVariant: '#c4c6d0',
 
-  outline: '#889296',
+  outline: '#8e9099',
 };
