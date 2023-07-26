@@ -1,19 +1,24 @@
 {
   "name": "hyperflex-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "files": ["dist"],
-  "main": "./dist/hyperflex-ui.cjs",
-  "module": "./dist/hyperflex-ui.js",
   "scripts": {
+    "start": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
+    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0 || >=17.x",
+    "react-dom": "^18.2.0 || >=17.x"
+  },
+
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -49,17 +54,37 @@
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
     "prettier": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.1.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.7"
+    "vite": "^4.4.7",
+    "vite-plugin-dts": "^3.3.1",
+    "vite-plugin-linter": "^2.0.2",
+    "vite-tsconfig-paths": "^4.2.0"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/hyperflex-ui.umd.js",
+  "module": "./dist/hyperflex-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/hyperflex-ui.js",
-      "require": "./dist/hyperflex-ui.cjs"
+      "import": "./dist/hyperflex-ui.es.js",
+      "require": "./dist/hyperflex-ui.umd.js"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn  eslint",
+      "yarn  format"
+    ]
   }
 }
