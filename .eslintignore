@@ -1,5 +1,6 @@
 node_modules/*
 lib
+dist
 tsconfig.json
 commitlint.config.js
 babel.config.js
