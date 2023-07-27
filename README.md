@@ -55,11 +55,12 @@ export const Container = (): JSX.Element => {
 ### References
 
 - [Material Design Guideline](https://m3.material.io/)
+- [Material theme builder](https://m3.material.io/theme-builder#/custom)
 - [Material Web Github repository](https://github.com/material-components/material-web)
 - [Material 3 Design Kit on Figma](https://www.figma.com/community/file/1035203688168086460/Material-3-Design-Kit)
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/joaoromeira/hyperflex-ui/LICENSE) file for detail
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/joaoromeira/hyperflex-ui/blob/main/LICENSE) file for detail
 
 Refer original license: [Material Web License](https://github.com/material-components/material-web/blob/main/LICENSE)
