@@ -49,7 +49,6 @@ export function withUtility<Props extends Record<string, Any>>(
 ) {
   return (props: Props) => {
     const isLight = props['theme']['palette'].mode === 'light';
-
     return fn({ palette: _palette(props), isLight }, props);
   };
 }

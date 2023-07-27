@@ -7,11 +7,11 @@ export const TOKENS_LIGHT: Tokens = {
   primaryContainer: '#d8e2ff',
   onPrimaryContainer: '#001a41',
 
-  secondary: '#565e71',
-  onSecondary: '#ffffff',
+  secondary: '#625B71',
+  onSecondary: '#FFFFFF',
 
-  secondaryContainer: '#dbe2f9',
-  onSecondaryContainer: '#141b2c',
+  secondaryContainer: '#E8DEF8',
+  onSecondaryContainer: '#1D192B',
 
   success: '#006e1b',
   onSuccess: '#ffffff',
@@ -56,11 +56,11 @@ export const TOKENS_DARK: Tokens = {
   primaryContainer: '#004493',
   onPrimaryContainer: '#d8e2ff',
 
-  secondary: '#bfc6dc',
-  onSecondary: '#293041',
+  secondary: '#CCC2DC',
+  onSecondary: '#332D41',
 
-  secondaryContainer: '#3f4759',
-  onSecondaryContainer: '#dbe2f9',
+  secondaryContainer: '#4A4458',
+  onSecondaryContainer: '#E8DEF8',
 
   success: '#45e355',
   onSuccess: '#003909',
