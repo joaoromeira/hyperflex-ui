@@ -9,7 +9,6 @@ declare module '@mui/material/styles/createTypography' {
 }
 
 export const typography: TypographyOptions = {
-  fontFamily: ['Satoshi', 'value-serif-regular'].join(','),
   display1: {
     fontSize: 96,
     fontWeight: 700,

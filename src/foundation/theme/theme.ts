@@ -8,9 +8,9 @@ import { typography } from './typography';
 
 export type { Theme } from '@mui/material/styles';
 
-export type CreateMyTheme = {
-  light: Partial<Tokens>;
-  dark: Partial<Tokens>;
+export type CustomTheme = {
+  light?: Partial<Tokens>;
+  dark?: Partial<Tokens>;
 };
 
 const mountTheme = (mode: PaletteMode, tokens: Tokens) =>
@@ -20,7 +20,7 @@ const mountTheme = (mode: PaletteMode, tokens: Tokens) =>
     spacing: 4,
   });
 
-export const createMyTheme = ({ dark, light }: CreateMyTheme) => ({
+export const customTheme = ({ dark = {}, light = {} }: CustomTheme) => ({
   dark: mountTheme('dark', { ...TOKENS_DARK, ...dark }),
   light: mountTheme('light', { ...TOKENS_LIGHT, ...light }),
 });
