@@ -54,9 +54,9 @@ export const Container = (): JSX.Element => {
 
 ### References
 
-[Material Design Guideline](https://m3.material.io/)
-[Material Web Github repository](https://github.com/material-components/material-web)
-[Material 3 Design Kit on Figma](https://www.figma.com/community/file/1035203688168086460/Material-3-Design-Kit)
+- [Material Design Guideline](https://m3.material.io/)
+- [Material Web Github repository](https://github.com/material-components/material-web)
+- [Material 3 Design Kit on Figma](https://www.figma.com/community/file/1035203688168086460/Material-3-Design-Kit)
 
 ### License
 
