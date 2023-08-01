@@ -17,6 +17,7 @@
    "scripts": {
       "start": "storybook dev -p 6006",
       "build": "tsc && vite build",
+      "build-storybook": "storybook build",
       "test": "echo \"Error: no test specified\" && exit 1",
       "lint": "eslint 'src/**/*.{ts,tsx}'",
       "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
