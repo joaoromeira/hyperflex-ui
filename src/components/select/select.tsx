@@ -4,11 +4,11 @@ import {
   Select as MuiSelect,
   InputLabel,
   SelectProps as MuiSelectProps,
-  FormControl as MuiFormControl,
 } from '@mui/material';
-import { SpacingProps, styled } from '@mui/system';
+import { SpacingProps } from '@mui/system';
 
 import { MuiProps } from '../components.types';
+import { FormControl } from '../form-control/form-control';
 
 type OmittedProps = Omit<MuiSelectProps, MuiProps | 'margin'>;
 
@@ -19,10 +19,6 @@ export interface SelectProps extends OmittedProps, SpacingProps {
   disabled?: boolean;
   fullWidth?: boolean;
 }
-
-export const FormControl = styled(MuiFormControl)`
-  min-width: 220px;
-`;
 
 export const Select = ({
   children,

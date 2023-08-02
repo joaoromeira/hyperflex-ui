@@ -1,16 +1,13 @@
-import React from 'react';
-
 import {
-  FormControl as MuiFormControl,
   TextField as _MuiTextField,
   TextFieldProps as MuiTextFieldProps,
 } from '@mui/material';
 import { styled, css } from '@mui/material/styles';
 import { SpacingProps } from '@mui/system';
-import { switchProp } from 'styled-tools';
 
 import { withUtility } from '../../foundation/utils';
 import { MuiProps } from '../components.types';
+import { FormControl } from '../form-control/form-control';
 
 type OmittedProps = Omit<MuiTextFieldProps, MuiProps | 'margin'>;
 
@@ -19,13 +16,6 @@ export interface TextFieldProps extends OmittedProps, SpacingProps {
   shrink?: boolean;
   disabled?: boolean;
 }
-
-const FormControl = styled(MuiFormControl)`
-  height: ${switchProp('size', {
-    small: '24px',
-    normal: '32px',
-  })};
-`;
 
 const MuiTextField = styled(_MuiTextField)(
   withUtility(

@@ -1,5 +1,5 @@
 declare module '@mui/material' {
-  interface TextFieldPropsSizeOverrides {
+  interface FormControlPropsSizeOverrides {
     normal: unknown;
     medium: false;
   }
