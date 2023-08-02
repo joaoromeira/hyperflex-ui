@@ -90,7 +90,7 @@ export const Switch = ({
   mx,
   my,
   label,
-  direction,
+  direction = 'left',
   ...props
 }: SwitchProps) => {
   const isLeftDirection = direction === 'left';

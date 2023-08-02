@@ -1,10 +1,10 @@
 import { StoryFn, Meta } from '@storybook/react';
 
-import { Switch as SwitchComponent } from './switch';
-import { SwitchProps } from './switch.types';
+import { Checkbox as CheckboxComponent } from './checkbox';
+import { CheckboxProps } from './checkbox.types';
 
 export default {
-  title: 'Components/Switch',
+  title: 'Components/Checkbox',
   argTypes: {
     direction: {
       options: ['left', 'right'],
@@ -23,14 +23,14 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn = (args: SwitchProps) => {
-  return <SwitchComponent {...args} />;
+const Template: StoryFn = (args: CheckboxProps) => {
+  return <CheckboxComponent {...args} />;
 };
 
-export const Switch = Template.bind({});
+export const Checkbox = Template.bind({});
 
-Switch.args = {
-  label: 'Option',
+Checkbox.args = {
+  label: 'One',
   disabled: false,
   direction: 'left',
   defaultChecked: true,
