@@ -4,6 +4,9 @@ export * from './button/button.types';
 export * from './tag/tag';
 export * from './tag/tag.types';
 
+export * from './date-picker/date-picker';
+export * from './date-picker/date-picker.types';
+
 export * from './divider/divider';
 export * from './divider/divider.types';
 
