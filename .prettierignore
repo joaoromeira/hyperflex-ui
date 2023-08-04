@@ -4,3 +4,4 @@
 **/*.svg
 tsconfig.json
 dist
+commitlint.config.js
