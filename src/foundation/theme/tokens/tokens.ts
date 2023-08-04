@@ -37,7 +37,7 @@ export const TOKENS_LIGHT: Tokens = {
   infoContainer: '#aeecff',
   onInfoContainer: '#001f26',
 
-  background: '#ff0000',
+  background: '#fefbff',
   onBackground: '#1b1b1f',
 
   surface: '#fefbff',
