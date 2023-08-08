@@ -18,10 +18,11 @@ export default {
 const Value = styled('div')<{ value: keyof Tokens }>(
   withUtility(
     ({ palette }, { value }) => css`
-      width: 30px;
-      height: 30px;
+      width: 48px;
+      height: 48px;
       background-color: ${palette(value)};
-      border-radius: 50%;
+      border-radius: 4px;
+      border: 1px solid ${palette('outline')};
     `
   )
 );
@@ -33,10 +34,10 @@ const Template: StoryFn = () => {
         {Object.keys(TOKENS_DARK).map((key: string) => {
           return (
             <tr key={key}>
-              <td>{key}</td>
               <td>
                 <Value value={key as keyof Tokens} />
               </td>
+              <td>{key}</td>
             </tr>
           );
         })}

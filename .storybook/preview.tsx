@@ -1,29 +1,30 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { theme } from '../src/index';
+import { themes as storybookThemes } from '@storybook/theming';
+import { useDarkMode } from 'storybook-dark-mode';
 import './assets/index.css';
 
-const { dark, light } = theme;
-
-export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Global theme for components',
-    defaultValue: 'light',
-
-    toolbar: {
-      title: 'Theme',
-      icon: 'circlehollow',
-      items: ['light', 'dark'],
-      dynamicTitle: true,
+export const parameters = {
+  darkMode: {
+    current: 'light',
+    normal: {
+      ...storybookThemes.normal, // copy existing values
+      appContentBg: theme.light.palette.background, // override main story view frame
+    },
+    dark: {
+      ...storybookThemes.dark, // copy existing values
+      appContentBg: theme.dark.palette.background, // override main story view frame
     },
   },
 };
 
 export const decorators = [
-  (Story, context) => {
+  (Story) => {
+    const isDark = useDarkMode();
+
     return (
-      <ThemeProvider theme={context.globals.theme === 'light' ? light : dark}>
+      <ThemeProvider theme={isDark ? theme.dark : theme.light}>
         <CssBaseline />
         <Story />
       </ThemeProvider>

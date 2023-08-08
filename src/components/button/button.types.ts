@@ -16,7 +16,13 @@ type OmittedProps = Omit<MuiButtonProps, MuiProps | 'color' | 'variant'>;
 export interface ButtonProps extends SpacingProps, OmittedProps {
   children?: React.ReactNode;
   variant?: 'filled' | 'outlined' | 'text';
-  hierarchy?: 'primary' | 'secondary';
+  hierarchy?:
+    | 'primary'
+    | 'secondary'
+    | 'positive'
+    | 'attention'
+    | 'negative'
+    | 'informative';
   fullWidth?: boolean;
   loading?: boolean;
   disabled?: boolean;

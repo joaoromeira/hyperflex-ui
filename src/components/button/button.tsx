@@ -33,56 +33,69 @@ export const Button: React.FC<ButtonProps> = styled(LoadingButton, {
   })};
 
   ${withUtility<ButtonProps>(
-    ({ palette, isLight }, { variant, loading, disabled, hierarchy }) => {
-      if (variant !== 'filled') {
-        return;
-      }
-
+    ({ palette }, { variant, loading, disabled, hierarchy = 'primary' }) => {
       if (loading || disabled) {
         return css`
-          border: 1.5px solid ${alpha(palette('onSurface'), 0.38)};
           background-color: ${alpha(palette('onSurface'), 0.12)};
           color: ${alpha(palette('onSurface'), 0.38)};
         `;
       }
 
-      if (hierarchy === 'primary') {
+      const colors = {
+        primary: {
+          color: palette('onPrimary'),
+          background: palette('primary'),
+        },
+        secondary: {
+          color: palette('onSecondary'),
+          background: palette('secondary'),
+        },
+        positive: {
+          color: palette('onSuccess'),
+          background: palette('success'),
+        },
+        attention: {
+          color: palette('onWarning'),
+          background: palette('warning'),
+        },
+        negative: {
+          color: palette('onError'),
+          background: palette('error'),
+        },
+        informative: {
+          color: palette('onInfo'),
+          background: palette('info'),
+        },
+      };
+
+      const { background, color } = colors[hierarchy as keyof typeof colors];
+
+      if (variant === 'filled') {
         return css`
-          background-color: ${palette(
-            isLight ? 'primaryContainer' : 'primary'
-          )};
-          color: ${palette(isLight ? 'onPrimaryContainer' : 'onPrimary')};
-          border: 1.5px solid
-            ${palette(isLight ? 'onPrimaryContainer' : 'onPrimary')};
+          background-color: ${background};
+          color: ${color};
 
           &:hover {
-            background-color: ${alpha(
-              palette(isLight ? 'primaryContainer' : 'primary'),
-              0.8
-            )};
+            background-color: ${alpha(background, 0.8)};
           }
         `;
       }
 
-      if (hierarchy === 'secondary') {
+      if (variant === 'outlined') {
         return css`
-          background-color: ${palette(
-            isLight ? 'secondaryContainer' : 'secondary'
-          )};
-          color: ${palette(isLight ? 'onSecondaryContainer' : 'onSecondary')};
-          border: 1.5px solid
-            ${palette(isLight ? 'onSecondaryContainer' : 'onSecondary')};
+          color: ${background};
+          border: 1px solid ${background};
 
           &:hover {
-            background-color: ${alpha(
-              palette(isLight ? 'secondaryContainer' : 'secondary'),
-              0.8
-            )};
+            border-color: ${alpha(background, 0.8)};
           }
         `;
       }
 
-      return css``;
+      // Text
+      return css`
+        color: ${background};
+      `;
     }
   )};
 `;

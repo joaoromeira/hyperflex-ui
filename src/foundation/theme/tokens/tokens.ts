@@ -1,43 +1,43 @@
 import { Tokens } from './tokens.types';
 
 export const TOKENS_LIGHT: Tokens = {
-  primary: '#005bc1',
+  primary: '#5956d7',
   onPrimary: '#ffffff',
 
   primaryContainer: '#d8e2ff',
   onPrimaryContainer: '#001a41',
 
-  secondary: '#625B71',
+  secondary: '#ff2c55',
   onSecondary: '#FFFFFF',
 
-  secondaryContainer: '#E8DEF8',
-  onSecondaryContainer: '#1D192B',
+  secondaryContainer: '#ffd8e6',
+  onSecondaryContainer: '#3d0024',
 
-  success: '#006e1b',
+  success: '#35c659',
   onSuccess: '#ffffff',
 
   successContainer: '#71ff75',
   onSuccessContainer: '#002203',
 
-  error: '#c00009',
+  error: '#ff3c30',
   onError: '#ffffff',
 
   errorContainer: '#ffdad5',
-  onErrorContainer: '#410001',
+  onErrorContainer: '#921105',
 
-  warning: '#745b00',
+  warning: '#ffcc01',
   onWarning: '#ffffff',
 
   warningContainer: '#ffe08b',
   onWarningContainer: '#241a00',
 
-  info: '#00687b',
+  info: '#31b1c7',
   onInfo: '#ffffff',
 
   infoContainer: '#aeecff',
   onInfoContainer: '#001f26',
 
-  background: '#fefbff',
+  background: '#ffffff',
   onBackground: '#1b1b1f',
 
   surface: '#fefbff',
@@ -50,46 +50,46 @@ export const TOKENS_LIGHT: Tokens = {
 };
 
 export const TOKENS_DARK: Tokens = {
-  primary: '#adc6ff',
-  onPrimary: '#002e69',
+  primary: '#5e5ce6',
+  onPrimary: '#fff',
 
   primaryContainer: '#004493',
   onPrimaryContainer: '#d8e2ff',
 
-  secondary: '#CCC2DC',
-  onSecondary: '#332D41',
+  secondary: '#ff375f',
+  onSecondary: '#ffffff',
 
-  secondaryContainer: '#4A4458',
-  onSecondaryContainer: '#E8DEF8',
+  secondaryContainer: '#8c0057',
+  onSecondaryContainer: '#ffd8e6',
 
-  success: '#45e355',
-  onSuccess: '#003909',
+  success: '#31d158',
+  onSuccess: '#ffffff',
 
   successContainer: '#005312',
   onSuccessContainer: '#71ff75',
 
-  error: '#ffb4a9',
+  error: '#fe463a',
   onError: '#690002',
 
   errorContainer: '#930005',
   onErrorContainer: '#ffdad5',
 
-  warning: '#f1c100',
-  onWarning: '#3d2f00',
+  warning: '#fed709',
+  onWarning: '#ffffff',
 
   warningContainer: '#584400',
   onWarningContainer: '#ffe08b',
 
-  info: '#56d6f5',
-  onInfo: '#003641',
+  info: '#3fc8e1',
+  onInfo: '#ffffff',
 
   infoContainer: '#004e5d',
   onInfoContainer: '#aeecff',
 
-  background: '#1b1b1f',
+  background: '#000',
   onBackground: '#e3e2e6',
 
-  surface: '#1b1b1f',
+  surface: '#1a1a1b',
   onSurface: '#e3e2e6',
 
   surfaceVariant: '#44474f',

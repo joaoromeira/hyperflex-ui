@@ -1,4 +1,5 @@
 import { PaletteMode, createTheme } from '@mui/material';
+import { merge } from 'lodash';
 
 import { makeComponents } from './components';
 import { makePalette } from './tokens/palette';
@@ -20,11 +21,6 @@ const mountTheme = (mode: PaletteMode, tokens: Tokens) =>
     spacing: 4,
   });
 
-export const customTheme = ({ dark = {}, light = {} }: CustomTheme) => ({
-  dark: mountTheme('dark', { ...TOKENS_DARK, ...dark }),
-  light: mountTheme('light', { ...TOKENS_LIGHT, ...light }),
-});
-
 export const theme = {
   dark: mountTheme('dark', TOKENS_DARK),
   light: mountTheme('light', TOKENS_LIGHT),
@@ -32,3 +28,13 @@ export const theme = {
 
 theme.light.components = makeComponents(theme.light);
 theme.dark.components = makeComponents(theme.dark);
+
+export const customTheme = ({ dark = {}, light = {} }: CustomTheme) => {
+  theme.dark = mountTheme('dark', merge(TOKENS_DARK, dark));
+  theme.light = mountTheme('light', merge(TOKENS_LIGHT, light));
+
+  theme.light.components = makeComponents(theme.light);
+  theme.dark.components = makeComponents(theme.dark);
+
+  return theme;
+};

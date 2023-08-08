@@ -13,7 +13,14 @@ export default {
       },
     },
     hierarchy: {
-      options: ['primary', 'secondary'],
+      options: [
+        'primary',
+        'secondary',
+        'positive',
+        'attention',
+        'negative',
+        'informative',
+      ],
       control: {
         type: 'select',
       },
