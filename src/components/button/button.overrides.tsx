@@ -4,7 +4,7 @@ export const Button = (theme: Theme): Pick<Components, 'MuiButton'> => {
   return {
     MuiButton: {
       defaultProps: {
-        size: 'medium',
+        size: 'normal',
       },
       styleOverrides: {
         root: {

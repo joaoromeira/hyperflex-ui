@@ -5,9 +5,9 @@ import { alpha, spacing } from '@mui/system';
 import { switchProp } from 'styled-tools';
 
 import { shouldNotForwardProps, withUtility } from '../../foundation/utils';
-import { ButtonProps } from './button.types';
+import { ButtonProps, IconProps } from './button.types';
 
-export const Button: React.FC<ButtonProps> = styled(LoadingButton, {
+const MuiButton: React.FC<ButtonProps> = styled(LoadingButton, {
   shouldForwardProp: shouldNotForwardProps,
 })<ButtonProps>`
   ${spacing};
@@ -99,3 +99,22 @@ export const Button: React.FC<ButtonProps> = styled(LoadingButton, {
     }
   )};
 `;
+
+export const Button = ({
+  icon,
+  iconPosition = 'left',
+  ...props
+}: ButtonProps) => {
+  const iconProps: IconProps = {};
+
+  if (icon && iconPosition === 'left') {
+    iconProps.startIcon = icon;
+  }
+
+  if (icon && iconPosition === 'right') {
+    iconProps.endIcon = icon;
+  }
+
+  console.log(iconProps);
+  return <MuiButton {...props} {...iconProps} />;
+};

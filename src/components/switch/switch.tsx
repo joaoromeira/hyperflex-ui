@@ -1,6 +1,7 @@
-import { FormControlLabel, Switch as MuiSwitch } from '@mui/material';
+import { FormControlLabel, Switch as _MuiSwitch } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { alpha, css, spacing } from '@mui/system';
+import { switchProp } from 'styled-tools';
 
 import {
   palette,
@@ -9,18 +10,30 @@ import {
 } from '../../foundation/utils';
 import { SwitchProps } from './switch.types';
 
-const Content: React.FC<SwitchProps> = styled(MuiSwitch, {
+const MuiSwitch: React.FC<SwitchProps> = styled(_MuiSwitch, {
   shouldForwardProp: shouldNotForwardProps,
 })<SwitchProps>`
   ${spacing};
 
-  width: 52px;
-  height: 32px;
+  width: ${switchProp('size', {
+    small: '44px',
+    normal: '52px',
+  })};
+  height: ${switchProp('size', {
+    small: '24px',
+    normal: '32px',
+  })};
   padding: 0;
 
   & .MuiSwitch-thumb {
-    width: 16px;
-    height: 16px;
+    width: ${switchProp('size', {
+      small: '8px',
+      normal: '16px',
+    })};
+    height: ${switchProp('size', {
+      small: '8px',
+      normal: '16px',
+    })};
     box-sizing: border-box;
     background-color: ${palette('outline')};
   }
@@ -33,8 +46,14 @@ const Content: React.FC<SwitchProps> = styled(MuiSwitch, {
   }
 
   & .Mui-checked .MuiSwitch-thumb {
-    width: 24px;
-    height: 24px;
+    width: ${switchProp('size', {
+      small: '16px',
+      normal: '24px',
+    })};
+    height: ${switchProp('size', {
+      small: '16px',
+      normal: '24px',
+    })};
     background-color: ${palette('onPrimary')};
   }
 
@@ -115,7 +134,7 @@ export const Switch = ({
         my,
       }}
       control={
-        <Content
+        <MuiSwitch
           {...props}
           mr={isLeftDirection ? 3 : 0}
           ml={isLeftDirection ? 0 : 3}
@@ -124,7 +143,7 @@ export const Switch = ({
       label={label}
     />
   ) : (
-    <Content
+    <MuiSwitch
       {...props}
       margin={margin}
       marginTop={marginTop}
