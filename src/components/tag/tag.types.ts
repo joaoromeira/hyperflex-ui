@@ -3,9 +3,9 @@ import { SpacingProps } from '@mui/system';
 
 import { MuiProps } from '../components.types';
 
-type OmittedProps = Omit<ChipProps, MuiProps | 'variant'>;
+type OmittedProps = Omit<ChipProps, MuiProps | 'color' | 'variant'>;
 
 export interface TagProps extends SpacingProps, OmittedProps {
-  variant?: 'neutral' | 'positive' | 'attention' | 'negative' | 'informative';
   iconPosition?: 'left' | 'right';
+  hierarchy?: 'neutral' | 'positive' | 'attention' | 'negative' | 'informative';
 }

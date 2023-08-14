@@ -6,7 +6,7 @@ import { Tag as TagComponent } from './tag';
 export default {
   title: 'Components/Tag',
   argTypes: {
-    variant: {
+    hierarchy: {
       options: ['neutral', 'positive', 'attention', 'negative', 'informative'],
       control: {
         type: 'select',
@@ -54,7 +54,7 @@ const Template: StoryFn<any> = (args) => {
 export const Tag = Template.bind({});
 
 Tag.args = {
-  variant: 'neutral',
+  hierarchy: 'neutral',
   size: 'medium',
   icon: false,
   iconPosition: 'left',

@@ -23,30 +23,29 @@ export const Tag = styled(Chip)<TagProps>`
     small: '12px',
     medium: '14px',
   })};
-
-  ${withUtility<TagProps>(({ palette }, { variant }) => {
+  ${withUtility<TagProps>(({ palette }, { hierarchy }) => {
     switch (true) {
-      case variant === 'neutral':
+      case hierarchy === 'neutral':
         return css`
           background-color: ${palette('surfaceVariant')};
           color: ${palette('onSurfaceVariant')};
         `;
-      case variant === 'positive':
+      case hierarchy === 'positive':
         return css`
           background-color: ${palette('successContainer')};
           color: ${palette('onSuccessContainer')};
         `;
-      case variant === 'attention':
+      case hierarchy === 'attention':
         return css`
           background-color: ${palette('warningContainer')};
           color: ${palette('onWarningContainer')};
         `;
-      case variant === 'negative':
+      case hierarchy === 'negative':
         return css`
           background-color: ${palette('errorContainer')};
           color: ${palette('onErrorContainer')};
         `;
-      case variant === 'informative':
+      case hierarchy === 'informative':
         return css`
           background-color: ${palette('infoContainer')};
           color: ${palette('onInfoContainer')};
