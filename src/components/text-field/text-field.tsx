@@ -1,5 +1,6 @@
 import {
   TextField as _MuiTextField,
+  FormHelperText,
   TextFieldProps as MuiTextFieldProps,
 } from '@mui/material';
 import { styled, css } from '@mui/material/styles';
@@ -45,6 +46,7 @@ export const TextField = ({
   mx,
   my,
   label,
+  helperText,
   ...props
 }: TextFieldProps) => {
   return (
@@ -76,6 +78,9 @@ export const TextField = ({
         InputLabelProps={{ shrink: shrink ? true : undefined }}
         label={label}
       />
+      {helperText && props.error && (
+        <FormHelperText>{helperText}</FormHelperText>
+      )}
     </FormControl>
   );
 };

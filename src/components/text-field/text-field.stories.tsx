@@ -6,7 +6,7 @@ export default {
   title: 'Components/Text Field',
   argTypes: {
     size: {
-      options: ['small', 'normal'],
+      options: ['small', 'normal', 'large'],
       control: {
         type: 'select',
       },
@@ -34,6 +34,7 @@ export const TextField = Template.bind({});
 TextField.args = {
   disabled: false,
   error: false,
+  helperText: 'Error',
   fullWidth: false,
   label: 'Label',
 };

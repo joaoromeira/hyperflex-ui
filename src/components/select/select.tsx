@@ -4,6 +4,7 @@ import {
   Select as MuiSelect,
   InputLabel,
   SelectProps as MuiSelectProps,
+  FormHelperText,
 } from '@mui/material';
 import { SpacingProps } from '@mui/system';
 
@@ -16,6 +17,7 @@ export interface SelectProps extends OmittedProps, SpacingProps {
   size?: 'small' | 'normal';
   children: React.ReactNode;
   label?: string;
+  helperText?: string;
   disabled?: boolean;
   fullWidth?: boolean;
 }
@@ -38,6 +40,7 @@ export const Select = ({
   mt,
   mx,
   my,
+  helperText,
   ...props
 }: SelectProps) => {
   return (
@@ -63,9 +66,12 @@ export const Select = ({
       }}
     >
       <InputLabel>{label}</InputLabel>
-      <MuiSelect size={size} {...props} label={label}>
+      <MuiSelect {...props} label={label}>
         {children}
       </MuiSelect>
+      {helperText && props.error && (
+        <FormHelperText>{helperText}</FormHelperText>
+      )}
     </FormControl>
   );
 };

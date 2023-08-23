@@ -27,9 +27,9 @@ const MuiButton: React.FC<ButtonProps> = styled(LoadingButton, {
   })}
 
   height: ${switchProp('size', {
-    small: '32px',
-    medium: '48px',
-    large: '56px',
+    small: '32px !important',
+    normal: '48px !important',
+    large: '56px !important',
   })};
 
   ${withUtility<ButtonProps>(
