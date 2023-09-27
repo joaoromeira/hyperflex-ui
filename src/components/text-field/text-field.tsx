@@ -78,9 +78,7 @@ export const TextField = ({
         InputLabelProps={{ shrink: shrink ? true : undefined }}
         label={label}
       />
-      {helperText && props.error && (
-        <FormHelperText>{helperText}</FormHelperText>
-      )}
+      {helperText && <FormHelperText>{helperText}</FormHelperText>}
     </FormControl>
   );
 };

@@ -5,5 +5,6 @@ import { palette } from '../../foundation/utils';
 import { TextProps } from './text.types';
 
 export const Text: React.FC<TextProps> = styled(Typography)<TextProps>`
-  color: ${(props) => props.color && palette(props.color)};
+  color: ${(props) =>
+    props.color ? palette(props.color) : palette('onBackground')};
 `;

@@ -6,12 +6,6 @@ import { SwitchProps } from './switch.types';
 export default {
   title: 'Components/Switch',
   argTypes: {
-    size: {
-      options: ['small', 'normal'],
-      control: {
-        type: 'select',
-      },
-    },
     direction: {
       options: ['left', 'right'],
       control: {

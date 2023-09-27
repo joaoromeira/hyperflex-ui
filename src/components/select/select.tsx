@@ -69,9 +69,7 @@ export const Select = ({
       <MuiSelect {...props} label={label}>
         {children}
       </MuiSelect>
-      {helperText && props.error && (
-        <FormHelperText>{helperText}</FormHelperText>
-      )}
+      {helperText && <FormHelperText>{helperText}</FormHelperText>}
     </FormControl>
   );
 };

@@ -1,7 +1,6 @@
 import { FormControlLabel, Switch as _MuiSwitch } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { alpha, css, spacing } from '@mui/system';
-import { switchProp } from 'styled-tools';
 
 import {
   palette,
@@ -15,25 +14,14 @@ const MuiSwitch: React.FC<SwitchProps> = styled(_MuiSwitch, {
 })<SwitchProps>`
   ${spacing};
 
-  width: ${switchProp('size', {
-    small: '44px',
-    normal: '52px',
-  })};
-  height: ${switchProp('size', {
-    small: '24px',
-    normal: '32px',
-  })};
+  width: 44px;
+  height: 24px;
+
   padding: 0;
 
   & .MuiSwitch-thumb {
-    width: ${switchProp('size', {
-      small: '8px',
-      normal: '16px',
-    })};
-    height: ${switchProp('size', {
-      small: '8px',
-      normal: '16px',
-    })};
+    width: 14px;
+    height: 14px;
     box-sizing: border-box;
     background-color: ${palette('outline')};
   }
@@ -46,14 +34,9 @@ const MuiSwitch: React.FC<SwitchProps> = styled(_MuiSwitch, {
   }
 
   & .Mui-checked .MuiSwitch-thumb {
-    width: ${switchProp('size', {
-      small: '16px',
-      normal: '24px',
-    })};
-    height: ${switchProp('size', {
-      small: '16px',
-      normal: '24px',
-    })};
+    width: 16px;
+    height: 16px;
+
     background-color: ${palette('onPrimary')};
   }
 
@@ -74,7 +57,7 @@ const MuiSwitch: React.FC<SwitchProps> = styled(_MuiSwitch, {
   & .MuiSwitch-switchBase {
     padding: 0;
     transition-duration: 300ms;
-    margin: 8px;
+    margin: 5px;
 
     &.Mui-checked {
       margin: 4px;
