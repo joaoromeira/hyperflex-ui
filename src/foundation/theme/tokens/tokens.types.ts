@@ -46,3 +46,5 @@ export interface Tokens {
 
   outline: string;
 }
+
+export type PaletteTokens = keyof Tokens;
